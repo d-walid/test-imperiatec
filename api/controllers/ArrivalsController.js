@@ -23,7 +23,8 @@ module.exports = {
 
   // Page pour ajouter une arrivée.
   add: function(req, res) {
-    res.view('arrivals/add')
+    let userID = req.query.userid;
+    res.view('arrivals/add', {userID:userID});
   },
 
 
@@ -34,13 +35,15 @@ module.exports = {
     let arrival_date = req.body.arrival_date;
     let appointment = req.body.appointment;
     let email = req.body.email;
+    let owner = req.body.owner;
 
     Arrival.create({
       nom:nom,
       prenom:prenom,
       arrival_date:arrival_date,
       appointment:appointment,
-      email:email
+      email:email,
+      owner:owner
       }).exec(function(error) {
         if (error) {
           res.send(500, {error: 'Erreur dans la fonction create des arrivées.'});

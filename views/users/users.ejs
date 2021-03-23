@@ -16,9 +16,10 @@
         <td><%= user.prenom %></td>
         <td><%= user.email %></td>
         <td>
-            <a href="/users/edit/<%= user.id %>" class="btn btn-primary">Éditer</a>
+            <a href="/users/show/<%= user.id %>" class="btn btn-primary">Voir</a>
+            <a href="/users/edit/<%= user.id %>" class="btn btn-primary">Éditer l'utilisateur</a>
             <form class="d-inline" action="/users/delete/<%= user.id %>" method="POST">
-              <input type="submit" value="Supprimer" class="btn btn-danger">
+              <input type="submit" value="Supprimer l'utilisateur" class="btn btn-danger">
             </form>
         </td>
       </tr>

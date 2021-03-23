@@ -1,0 +1,44 @@
+<h4 class="display-5">Informations</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= user.nom %></td>
+          <td><%= user.prenom %></td>
+          <td><%= user.email %></td>
+        </tr>
+    </tbody>
+  </table>
+
+<h4 class="display-5">Liste des arrivées</h4>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Date</th>
+      <th>Heure</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% user.arrivals.forEach(function(arrival) {%>
+      <tr>
+        <td><%= arrival.id %></td>
+        <td><%= arrival.nom %></td>
+        <td><%= arrival.prenom %></td>
+        <td><%= arrival.arrival_date %></td>
+        <td><%= arrival.appointment %></td>
+        <td><%= arrival.email %></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+<a href="/arrivals/add?userid=<%= user.id %>" class="btn btn-light">Ajouter une arrivée</a>

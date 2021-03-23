@@ -65,12 +65,23 @@ module.exports = {
 
   // Page pour éditer un utilisateur.
   edit: function(req,res) {
-    User.findOne({ id : req.params.id }).exec(function(error, users) {
+    User.findOne({ id : req.params.id }).exec(function(error, user) {
       if (error) {
         res.send(500, {error: 'Erreur dans la fonction edit des utilisateurs.'});
       }
 
-      res.view('users/edit', {users:users});
+      res.view('users/edit', {user:user});
+    })
+  },
+
+  // Page pour voir la liste d'arrivée d'un utilisateur.
+  show: function(req,res) {
+    User.findOne({ id : req.params.id }).populate('arrivals').exec(function(error, user) {
+      if (error) {
+        res.send(500, {error: 'Erreur dans la fonction show des utilisateurs.'});
+      }
+
+      res.view('users/show', {user:user});
     })
   },
 

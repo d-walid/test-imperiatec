@@ -62,6 +62,12 @@ module.exports.routes = {
     action: 'update',
   },
 
+  // Route pour afficher la liste d'arrivée d'un utilisateur.
+  '/users/show/:id' : {
+    controller: 'UsersController',
+    action: 'show',
+  },
+
 
   /*
   *** ROUTES ARRIVALS. ***

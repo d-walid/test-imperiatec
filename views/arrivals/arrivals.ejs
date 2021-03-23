@@ -5,9 +5,10 @@
       <th>ID</th>
       <th>Nom</th>
       <th>Prénom</th>
-      <th>Date d'arrivée</th>
+      <th>Date</th>
       <th>Heure</th>
-      <th>Email de la personne rencontrée</th>
+      <th>Email</th>
+      <th>Responsable</th>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +20,7 @@
         <td><%= arrival.arrival_date %></td>
         <td><%= arrival.appointment %></td>
         <td><%= arrival.email %></td>
+        <td><%= arrival.owner %></td>
         <td>
           <a href="/arrivals/edit/<%= arrival.id%>" class="btn btn-primary">Éditer</a>
           <form class="d-inline" action="/arrivals/delete/<%= arrival.id %>" method="POST">
