@@ -1,0 +1,27 @@
+<h1 class="display-4">Utilisateurs</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% users.forEach(function(users) {%>
+      <tr>
+        <td><%= users.id %></td>
+        <td><%= users.nom %></td>
+        <td><%= users.prenom %></td>
+        <td><%= users.email %></td>
+        <td>
+            <a href="/users/edit/<%= users.id %>" class="btn btn-primary">Editer l'utilisateur</a>
+            <form class="d-inline" action="/users/delete/<%= users.id %>" method="POST">
+            <input type="submit" value="Supprimer l'utilisateur" class="btn btn-danger">
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table> 
