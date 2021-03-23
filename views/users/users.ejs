@@ -9,15 +9,15 @@
     </tr>
   </thead>
   <tbody>
-    <% users.forEach(function(users) {%>
+    <% users.forEach(function(user) {%>
       <tr>
-        <td><%= users.id %></td>
-        <td><%= users.nom %></td>
-        <td><%= users.prenom %></td>
-        <td><%= users.email %></td>
+        <td><%= user.id %></td>
+        <td><%= user.nom %></td>
+        <td><%= user.prenom %></td>
+        <td><%= user.email %></td>
         <td>
-            <a href="/users/edit/<%= users.id %>" class="btn btn-primary">Éditer</a>
-            <form class="d-inline" action="/users/delete/<%= users.id %>" method="POST">
+            <a href="/users/edit/<%= user.id %>" class="btn btn-primary">Éditer</a>
+            <form class="d-inline" action="/users/delete/<%= user.id %>" method="POST">
               <input type="submit" value="Supprimer" class="btn btn-danger">
             </form>
         </td>

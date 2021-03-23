@@ -11,7 +11,7 @@ module.exports = {
 
   // Lister les arrivées
   list: function(req, res) {
-    Arrivals.find({}).exec(function(error, arrivals) {
+    Arrival.find({}).exec(function(error, arrivals) {
       if (error) {
         res.send(500, {error: 'Erreur dans la fonction list des arrivées'});
       }
@@ -35,7 +35,7 @@ module.exports = {
     let appointment = req.body.appointment;
     let email = req.body.email;
 
-    Arrivals.create({
+    Arrival.create({
       nom:nom,
       prenom:prenom,
       arrival_date:arrival_date,
@@ -53,7 +53,7 @@ module.exports = {
 
   // Supprimer une arrivée.
   delete: function(req, res) {
-    Arrivals.destroy({ id : req.params.id }).exec(function(error) {
+    Arrival.destroy({ id : req.params.id }).exec(function(error) {
       if (error) {
         res.send(500, {error: 'Erreur dans la fonction delete des arrivées.'});
       }
@@ -67,7 +67,7 @@ module.exports = {
 
   // Page pour éditer une arrivée.
   edit: function(req,res) {
-    Arrivals.findOne({ id : req.params.id }).exec(function(error, arrivals) {
+    Arrival.findOne({ id : req.params.id }).exec(function(error, arrivals) {
       if (error) {
         res.send(500, {error: 'Erreur dans la fonction edit des arrivées.'});
       }
@@ -85,7 +85,7 @@ module.exports = {
     let appointment = req.body.appointment;
     let email = req.body.email;
 
-    Arrivals.update({id: req.params.id},
+    Arrival.update({id: req.params.id},
       {nom:nom,
       prenom:prenom,
       arrival_date:arrival_date,

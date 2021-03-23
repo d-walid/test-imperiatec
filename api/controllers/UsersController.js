@@ -11,7 +11,7 @@ module.exports = {
 
   // Lister les utilisateurs.
   list: function(req, res) {
-    Users.find({}).exec(function(error, users) {
+    User.find({}).exec(function(error, users) {
       if(error) {
         res.send(500, {error: 'Erreur dans la fonction list des utilisateurs.'});
       }
@@ -34,7 +34,7 @@ module.exports = {
     let email = req.body.email;
     let password = req.body.password;
 
-    Users.create({
+    User.create({
       nom:nom, 
       prenom:prenom, 
       email:email, 
@@ -51,7 +51,7 @@ module.exports = {
 
   // Supprimer un utilisateur.
   delete: function(req, res) {
-    Users.destroy({ id : req.params.id }).exec(function(error){
+    User.destroy({ id : req.params.id }).exec(function(error){
       if (error) {
         res.send(500, {error: 'Erreur dans la fonction delete des utilisateurs.'});
       }
@@ -65,7 +65,7 @@ module.exports = {
 
   // Page pour éditer un utilisateur.
   edit: function(req,res) {
-    Users.findOne({ id : req.params.id }).exec(function(error, users) {
+    User.findOne({ id : req.params.id }).exec(function(error, users) {
       if (error) {
         res.send(500, {error: 'Erreur dans la fonction edit des utilisateurs.'});
       }
@@ -82,7 +82,7 @@ module.exports = {
   let email = req.body.email;
   let password = req.body.password;
 
-  Users.update({id: req.params.id},
+  User.update({id: req.params.id},
     {nom:nom, 
     prenom:prenom, 
     email:email, 

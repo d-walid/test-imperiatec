@@ -72,7 +72,7 @@ module.exports.routes = {
     controller: 'ArrivalsController',
     action: 'list',
   },
-
+  
   // Route d'ajout.
   'arrivals/add' : {
     controller: 'ArrivalsController',

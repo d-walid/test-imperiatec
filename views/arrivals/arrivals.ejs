@@ -11,17 +11,17 @@
     </tr>
   </thead>
   <tbody>
-    <% arrivals.forEach(function(arrivals) {%>
+    <% arrivals.forEach(function(arrival) {%>
       <tr>
-        <td><%= arrivals.id %></td>
-        <td><%= arrivals.nom %></td>
-        <td><%= arrivals.prenom %></td>
-        <td><%= arrivals.arrival_date %></td>
-        <td><%= arrivals.appointment %></td>
-        <td><%= arrivals.email %></td>
+        <td><%= arrival.id %></td>
+        <td><%= arrival.nom %></td>
+        <td><%= arrival.prenom %></td>
+        <td><%= arrival.arrival_date %></td>
+        <td><%= arrival.appointment %></td>
+        <td><%= arrival.email %></td>
         <td>
-          <a href="/arrivals/edit/<%= arrivals.id%>" class="btn btn-primary">Éditer</a>
-          <form class="d-inline" action="/arrivals/delete/<%= arrivals.id %>" method="POST">
+          <a href="/arrivals/edit/<%= arrival.id%>" class="btn btn-primary">Éditer</a>
+          <form class="d-inline" action="/arrivals/delete/<%= arrival.id %>" method="POST">
             <input type="submit" value="Supprimer" class="btn btn-danger">
           </form>
         </td>
