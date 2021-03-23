@@ -1,0 +1,28 @@
+<h1 class="display-4">Ajouter une arrivée</h1>
+
+<form method="POST" action="/arrivals/create">
+
+  <div class="form-group">
+    <label for="nom">Nom</label>
+    <input type="text" name="nom" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="prenom">Prénom</label>
+    <input type="text" name="prenom" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="arrival_date">Date d'arrivée</label>
+    <input type="date" name="arrival_date" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="appointment">Heure de rendez-vous</label>
+    <input type="appointment" name="appointment" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="email">Email de la personne rencontrée</label>
+    <input type="email" name="email" class="form-control">
+  </div>
+
+  <input type="submit" value="Enregistrer" class="btn btn-primary">
+
+</form>

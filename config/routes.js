@@ -21,36 +21,87 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
+
+  /*
+  *** ROUTES USERS. ***
+  */
+
+  // Route de listing.
   'users/list': {
-    controller: "UsersController",
-    action: "list"
+    controller: 'UsersController',
+    action: 'list'
   },
 
+  // Route d'ajout.
   'users/add': {
-    controller: "UsersController",
-    action: "add"
+    controller: 'UsersController',
+    action: 'add'
   },
 
+  // Route pour créer.
   'users/create': {
-    controller: "UsersController",
-    action: "create"
+    controller: 'UsersController',
+    action: 'create'
   },
 
+  // Route pour supprimer.
   '/users/delete/:id' : {
     controller: 'UsersController',
     action: 'delete',
   },
 
+  // Route pour éditer.
   '/users/edit/:id' : {
     controller: 'UsersController',
     action: 'edit',
   },
 
+  // Route pour mettre à jour.
   '/users/update/:id' : {
     controller: 'UsersController',
     action: 'update',
-  }
+  },
 
+
+  /*
+  *** ROUTES ARRIVALS. ***
+  */
+  
+  // Route de listing.
+  'arrivals/list' : {
+    controller: 'ArrivalsController',
+    action: 'list',
+  },
+
+  // Route d'ajout.
+  'arrivals/add' : {
+    controller: 'ArrivalsController',
+    action: 'add'
+  },
+
+  // Route pour créer.
+  'arrivals/create' : {
+    controller: 'ArrivalsController',
+    action: 'create'
+  },
+
+  // Route pour supprimer.
+  '/arrivals/delete/:id' : {
+    controller: 'ArrivalsController',
+    action: 'delete'
+  },
+
+  // Route pour éditer.
+  '/arrivals/edit/:id' : {
+    controller: 'ArrivalsController',
+    action: 'edit'
+  },
+
+  // Route pour mettre à jour.
+  '/arrivals/update/:id' : {
+    controller: 'ArrivalsController',
+    action: 'update'
+  },
 
   /***************************************************************************
   *                                                                          *

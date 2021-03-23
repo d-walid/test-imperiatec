@@ -1,0 +1,29 @@
+<h1 class="display-4">Éditer une arrivée</h1>
+
+<form method="POST" action="/arrivals/update/<%= arrivals.id %>">
+
+  <div class="form-group">
+    <label for="nom">Nom</label>
+    <input type="text" name="nom" class="form-control" value="<%= arrivals.nom %>">
+  </div>
+  <div class="form-group">
+    <label for="prenom">Prénom</label>
+    <input type="text" name="prenom" class="form-control" value="<%= arrivals.prenom %>">
+  </div>
+  <div class="form-group">
+    <label for="arrival_date">Date d'arrivée</label>
+    <input type="date" name="arrival_date" class="form-control" value="<%= arrivals.arrival_date %>">
+  </div>
+  <div class="form-group">
+    <label for="appointment">Heure de rendez-vous</label>
+    <input type="appointment" name="appointment" class="form-control" value="<%= arrivals.appointment %>">
+  </div>
+  <div class="form-group">
+    <label for="email">Email de la personne rencontrée</label>
+    <input type="email" name="email" class="form-control" value="<%= arrivals.email %>">
+  </div>
+
+
+  <input type="submit" value="Enregistrer" class="btn btn-primary">
+
+</form>
