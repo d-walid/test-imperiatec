@@ -13,9 +13,9 @@ Réalisé à l'aide de Sailsjs/Node/MongoDB + HTML/CSS(Bootstrap).
 
 Pour lancer le projet : 
 
-« npm install » pour pouvoir installer les dépendances.
-« sails lift » pour lancer l'application la première fois.
-« nodemon app.js » pour que l'application se relance automatiquement à chaque sauvegarde de fichier.
+- « npm install » pour pouvoir installer les dépendances.
+- « sails lift » pour lancer l'application la première fois.
+- « nodemon app.js » pour que l'application se relance automatiquement à chaque sauvegarde de fichier.
 
 Vous pourrez trouver toutes les routes nécessaires à l'utilisation dans le dossier config/routes.js
 
